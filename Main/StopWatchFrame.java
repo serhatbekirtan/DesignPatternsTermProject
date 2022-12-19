@@ -5,6 +5,8 @@ import StopWatchDecorator.GreenBackground;
 import StopWatchDecorator.RedBackground;
 import StopWatchFactory.StopWatchFactory;
 import StopWatchFactory.StopWatchGenerator;
+import ButtonFactory.ButtonFactory;
+import ButtonFactory.ButtonGenerator;
 
 public class StopWatchFrame {
 
@@ -13,6 +15,14 @@ public class StopWatchFrame {
     private StopWatchFrame(){
 
         StopWatchFactory factory = new StopWatchGenerator();
+        ButtonFactory buttonFactory = new ButtonGenerator();
+
+        StopWatchButton addActivityButton = buttonFactory.createStopWatchButton("Add Activity");
+        StopWatchButton changeColorButton = buttonFactory.createStopWatchButton("Color");
+        StopWatchButton deleteActivityButton = buttonFactory.createStopWatchButton("Delete Activity");
+        StopWatchButton startStopButton = buttonFactory.createStopWatchButton("Start/Stop");
+
+        System.out.println("");
 
         StopWatch stopwatchCycling = factory.createStopwatch("cycling");
         stopwatchCycling = new RedBackground(stopwatchCycling);
