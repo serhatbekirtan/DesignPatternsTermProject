@@ -11,12 +11,12 @@ public abstract class StopWatch {
         return "with Default background color\n";
     }
 
-    void start() {
-        System.out.println("Starting stopwatch for " + activityName);
+    public void start() {
+        System.out.println("Starting " + activityName);
     }
 
-    void stop() {
-        System.out.println("Stopping stopwatch for " + activityName);
+    public void stop() {
+        System.out.println("Stopping " + activityName);
     }
 
     public String getActivityName() {

@@ -23,6 +23,8 @@ public class StopWatchGenerator extends StopWatchFactory {
             return new GamingStopWatch();
         } else if(activityName.equalsIgnoreCase("programming")){
             return new ProgrammingStopWatch();
+        } else if(activityName.equalsIgnoreCase("running")){
+            return new RunningStopWatch();
         } else {
             return null;
         }

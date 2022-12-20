@@ -13,7 +13,7 @@ public class ButtonGenerator extends ButtonFactory {
 
         if (buttonName.equals("Add Activity")) {
             return new AddActivityButton();
-        } else if (buttonName.equals("Color")) {
+        } else if (buttonName.equals("Change Color")) {
             return new ChangeColorButton();
         } else if (buttonName.equals("Delete Activity")) {
             return new DeleteActivityButton();

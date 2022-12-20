@@ -7,4 +7,6 @@ public abstract class StopWatchButton {
     public void create(){
         System.out.println("Creating " + buttonName + " Button");
     }
+
+    public abstract void click();
 }

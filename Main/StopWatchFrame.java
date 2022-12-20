@@ -1,47 +1,50 @@
 package Main;
 
-import StopWatchDecorator.BlueBackground;
-import StopWatchDecorator.GreenBackground;
-import StopWatchDecorator.RedBackground;
-import StopWatchFactory.StopWatchFactory;
-import StopWatchFactory.StopWatchGenerator;
+import java.util.LinkedList;
+
 import ButtonFactory.ButtonFactory;
 import ButtonFactory.ButtonGenerator;
 
 public class StopWatchFrame {
 
     private static StopWatchFrame uniqueFrame = new StopWatchFrame();
+    public LinkedList<StopWatchButton> buttons = new LinkedList<StopWatchButton>();
+    public LinkedList<StopWatch> stopwatches = new LinkedList<StopWatch>();
+    //private StopWatchFactory stopWatchFactory = new StopWatchGenerator();
+    private ButtonFactory buttonFactory = new ButtonGenerator();
 
     private StopWatchFrame(){
 
-        StopWatchFactory factory = new StopWatchGenerator();
-        ButtonFactory buttonFactory = new ButtonGenerator();
-
-        StopWatchButton addActivityButton = buttonFactory.createStopWatchButton("Add Activity");
-        StopWatchButton changeColorButton = buttonFactory.createStopWatchButton("Color");
-        StopWatchButton deleteActivityButton = buttonFactory.createStopWatchButton("Delete Activity");
-        StopWatchButton startStopButton = buttonFactory.createStopWatchButton("Start/Stop");
+        buttons.add(buttonFactory.createStopWatchButton("Add Activity"));
+        buttons.add(buttonFactory.createStopWatchButton("Delete Activity"));
+        buttons.add(buttonFactory.createStopWatchButton("Change Color"));
+        buttons.add(buttonFactory.createStopWatchButton("Start/Stop"));
 
         System.out.println("");
 
-        StopWatch stopwatchCycling = factory.createStopwatch("cycling");
-        stopwatchCycling = new RedBackground(stopwatchCycling);
-        System.out.println(stopwatchCycling.getActivityName());
+        // StopWatch cyclingStopWatch = new RedBackground(stopwatches.get(1));
+        // System.out.println(cyclingStopWatch.getActivityName());
 
-        System.out.println("");
+        // System.out.println("");
 
-        StopWatch stopwatchProgramming = factory.createStopwatch("programming");
-        stopwatchProgramming = new GreenBackground(stopwatchProgramming);
-        System.out.println(stopwatchProgramming.getActivityName());
+        // StopWatch programmingStopWatch = new GreenBackground(stopwatches.get(2));
+        // System.out.println(programmingStopWatch.getActivityName());
 
-        System.out.println("");
+        // System.out.println("");
 
-        StopWatch stopwatchSwimming = factory.createStopwatch("swimming");
-        stopwatchSwimming = new BlueBackground(stopwatchSwimming);
-        System.out.println(stopwatchSwimming.getActivityName());
+        // StopWatch stopwatchSwimming = new BlueBackground(stopwatches.get(3));
+        // System.out.println(stopwatchSwimming.getActivityName());
     }
 
     public static StopWatchFrame getInstance(){
         return uniqueFrame;
+    }
+
+    public void printStopwatches(){
+        System.out.println("");
+        for (StopWatch stopwatch : stopwatches) {
+            System.out.println(stopwatch.getActivityName());
+        }
+        System.out.println("");
     }
 }
