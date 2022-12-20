@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/bey-s/VSCodeProjects/JavaProjects/DesignPatterns/TermProject</OriginalElement>
+  <nodes>
+    <node x="739.6875340228634" y="260.0">StopWatchTypes.GamingStopWatch</node>
+    <node x="1083.9323090330395" y="-6.3762710941753085">Main.StopWatch</node>
+    <node x="2041.5284165085063" y="518.2640446379967">Commands.StartStopCommand</node>
+    <node x="739.6875340228634" y="692.0224714207948">StopWatchTypes.RunningStopWatch</node>
+    <node x="739.6875340228634" y="584.0168535655961">StopWatchTypes.WalkingStopWatch</node>
+    <node x="739.6875340228634" y="368.0056178551987">StopWatchTypes.SwimmingStopWatch</node>
+    <node x="1452.222495304232" y="237.0">StopWatchDecorator.StopWatchDecorator</node>
+    <node x="1827.3069597169297" y="949.5318345127926">ButtonTypes.StartStopButton</node>
+    <node x="1457.222495304232" y="544.0">ButtonTypes.ChangeColorButton</node>
+    <node x="739.6875340228634" y="476.0112357103974">StopWatchTypes.ProgrammingStopWatch</node>
+    <node x="1181.797441480675" y="942.0280892759935">ButtonTypes.AddActivityButton</node>
+    <node x="3305.459765309676" y="1187.3372128470332">Main.StopWatchFrame</node>
+    <node x="382.95134458356006" y="92.70745236799132">StopWatchFactory.StopWatchGenerator</node>
+    <node x="2613.5284165085063" y="518.2640446379967">Commands.DeleteActivityCommand</node>
+    <node x="1347.5671732088654" y="1064.9612084921066">ButtonFactory.ButtonGenerator</node>
+    <node x="382.95134458356006" y="-60.56172019597159">StopWatchFactory.StopWatchFactory</node>
+    <node x="1325.5671732088654" y="1202.8372128470332">ButtonFactory.ButtonFactory</node>
+    <node x="1618.3069597169297" y="949.5318345127926">ButtonTypes.DeleteActivityButton</node>
+    <node x="1216.722495304232" y="379.0">StopWatchDecorator.BlueBackground</node>
+    <node x="2320.5284165085063" y="518.2640446379967">Commands.AddActivityCommand</node>
+    <node x="2527.0285426346322" y="710.4985748502994">Main.StopWatchApp</node>
+    <node x="1441.722495304232" y="379.0">StopWatchDecorator.GreenBackground</node>
+    <node x="2541.5285426346322" y="306.22765487207397">Commands.Command</node>
+    <node x="1674.722495304232" y="379.0">StopWatchDecorator.RedBackground</node>
+    <node x="2917.5284165085063" y="518.2640446379967">Commands.ChangeColorCommand</node>
+    <node x="3191.573302736051" y="294.72765487207397">Commands.Button</node>
+    <node x="1736.0656096897103" y="777.5280892759935">Main.StopWatchButton</node>
+    <node x="739.6875340228634" y="800.0280892759935">StopWatchTypes.CyclingStopWatch</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Commands.Button" target="Commands.Command" relationship="TO_ONE">
+      <point x="-76.5" y="0.0" />
+      <point x="62.0" y="0.0" />
+    </edge>
+    <edge source="StopWatchFactory.StopWatchGenerator" target="StopWatchTypes.CyclingStopWatch" relationship="CREATE">
+      <point x="-30.0" y="38.5" />
+      <point x="478.45134458356006" y="827.0280892759935" />
+      <point x="-108.0" y="0.0" />
+    </edge>
+    <edge source="StopWatchTypes.GamingStopWatch" target="Main.StopWatch" relationship="GENERALIZATION">
+      <point x="4.6597713662777096E-4" y="27.0" />
+      <point x="847.688" y="287.0" />
+      <point x="1020.0" y="287.0" />
+      <point x="1020.0" y="88.124" />
+      <point x="-88.00030903303946" y="2.7109417530368773E-4" />
+    </edge>
+    <edge source="StopWatchFactory.StopWatchGenerator" target="StopWatchFactory.StopWatchFactory" relationship="GENERALIZATION">
+      <point x="0.0" y="-38.5" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="Main.StopWatchFrame" target="Main.StopWatchButton" relationship="TO_MANY">
+      <point x="15.000074102409144" y="-50.000337506804726" />
+      <point x="3413.9598394120853" y="831.4195966118674" />
+      <point x="62.41519794011879" y="4.391507335873939" />
+    </edge>
+    <edge source="ButtonTypes.ChangeColorButton" target="StopWatchDecorator.RedBackground" relationship="CREATE">
+      <point x="91.0" y="-7.045835601524232" />
+      <point x="1775.722495304232" y="575.4541643984758" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="ButtonFactory.ButtonGenerator" target="ButtonTypes.AddActivityButton" relationship="CREATE">
+      <point x="-133.5" y="0.0" />
+      <point x="1268.297441480675" y="1103.4612084921066" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="StopWatchDecorator.BlueBackground" target="StopWatchDecorator.StopWatchDecorator" relationship="GENERALIZATION">
+      <point x="-5.7501704304741E-6" y="-49.99983560152424" />
+      <point x="1319.2224895540617" y="346.95416439847577" />
+      <point x="1548.2224895540617" y="346.95416439847577" />
+      <point x="-5.7501704304741E-6" y="38.50016439847576" />
+    </edge>
+    <edge source="Commands.AddActivityCommand" target="Commands.Command" relationship="REALIZATION">
+      <point x="-4.7747747748871916E-4" y="-38.5" />
+      <point x="2457.027939031029" y="445.2640446379967" />
+      <point x="2603.528939031029" y="445.2640446379967" />
+      <point x="3.9639639680899563E-4" y="27.000389765922705" />
+    </edge>
+    <edge source="Main.StopWatchApp" target="Commands.ChangeColorCommand" relationship="CREATE">
+      <point x="76.5" y="0.0" />
+      <point x="3073.027939031029" y="748.9985748502994" />
+      <point x="14.999522522522511" y="38.5" />
+    </edge>
+    <edge source="Main.StopWatchApp" target="Commands.StartStopCommand" relationship="CREATE">
+      <point x="-76.5" y="0.29355906369073637" />
+      <point x="2171.0284165085063" y="749.2921339139901" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="StopWatchFactory.StopWatchGenerator" target="StopWatchTypes.RunningStopWatch" relationship="CREATE">
+      <point x="0.0" y="38.5" />
+      <point x="508.45134458356006" y="719.0224714207948" />
+      <point x="-108.0" y="0.0" />
+    </edge>
+    <edge source="ButtonFactory.ButtonGenerator" target="ButtonTypes.StartStopButton" relationship="CREATE">
+      <point x="133.5" y="15.0" />
+      <point x="1906.3069597169297" y="1118.4612084921066" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="StopWatchDecorator.StopWatchDecorator" target="Main.StopWatch" relationship="GENERALIZATION">
+      <point x="-96.0" y="-3.5" />
+      <point x="1171.9323090330395" y="272.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="Commands.DeleteActivityCommand" target="Commands.Command" relationship="REALIZATION">
+      <point x="-4.7747747748871916E-4" y="-38.5" />
+      <point x="2755.527939031029" y="445.2640446379967" />
+      <point x="2603.528939031029" y="445.2640446379967" />
+      <point x="3.9639639680899563E-4" y="27.000389765922705" />
+    </edge>
+    <edge source="StopWatchFactory.StopWatchGenerator" target="StopWatchTypes.SwimmingStopWatch" relationship="CREATE">
+      <point x="45.0" y="38.5" />
+      <point x="553.4513445835601" y="395.0056178551987" />
+      <point x="-108.0" y="0.0" />
+    </edge>
+    <edge source="Main.StopWatchFrame" target="ButtonFactory.ButtonFactory" relationship="TO_ONE">
+      <point x="-93.5" y="15.0" />
+      <point x="155.5" y="0.0" />
+    </edge>
+    <edge source="StopWatchFactory.StopWatchGenerator" target="StopWatchTypes.ProgrammingStopWatch" relationship="CREATE">
+      <point x="30.0" y="38.5" />
+      <point x="538.4513445835601" y="503.0112357103974" />
+      <point x="-108.0" y="0.0" />
+    </edge>
+    <edge source="Commands.ChangeColorCommand" target="Commands.Command" relationship="REALIZATION">
+      <point x="-4.7747747748871916E-4" y="-38.5" />
+      <point x="3058.027939031029" y="445.2640446379967" />
+      <point x="2603.528939031029" y="445.2640446379967" />
+      <point x="3.9639639680899563E-4" y="27.000389765922705" />
+    </edge>
+    <edge source="Main.StopWatchApp" target="Commands.DeleteActivityCommand" relationship="CREATE">
+      <point x="17.499873873874094" y="-38.5" />
+      <point x="-134.5" y="38.5" />
+    </edge>
+    <edge source="ButtonFactory.ButtonGenerator" target="ButtonTypes.ChangeColorButton" relationship="CREATE">
+      <point x="0.0" y="-38.5" />
+      <point x="-67.15532209536673" y="38.5" />
+    </edge>
+    <edge source="Main.StopWatchApp" target="Commands.Button" relationship="CREATE">
+      <point x="76.5" y="15.0" />
+      <point x="3268.073302736051" y="763.9985748502994" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="ButtonTypes.StartStopButton" target="Main.StopWatchButton" relationship="GENERALIZATION">
+      <point x="-8.741350027219369" y="-38.5" />
+      <point x="77.0" y="49.5" />
+    </edge>
+    <edge source="StopWatchTypes.CyclingStopWatch" target="Main.StopWatch" relationship="GENERALIZATION">
+      <point x="108.00046597713663" y="-8.927599344588089E-5" />
+      <point x="1020.0" y="827.028" />
+      <point x="1020.0" y="88.124" />
+      <point x="-88.00030903303946" y="2.7109417530368773E-4" />
+    </edge>
+    <edge source="Commands.StartStopCommand" target="Main.StopWatchButton" relationship="TO_ONE">
+      <point x="-63.35247747747735" y="38.5" />
+      <point x="2107.675939031029" y="628.2640446379967" />
+      <point x="1820.566" y="628.2640446379967" />
+      <point x="3.903102897311328E-4" y="-49.500089275993446" />
+    </edge>
+    <edge source="StopWatchTypes.WalkingStopWatch" target="Main.StopWatch" relationship="GENERALIZATION">
+      <point x="4.6597713662777096E-4" y="-26.999853565596027" />
+      <point x="847.688" y="611.0168535655961" />
+      <point x="1020.0" y="611.0168535655961" />
+      <point x="1020.0" y="88.124" />
+      <point x="-88.00030903303946" y="2.7109417530368773E-4" />
+    </edge>
+    <edge source="ButtonTypes.ChangeColorButton" target="StopWatchDecorator.BlueBackground" relationship="CREATE">
+      <point x="-91.0" y="-11.028982035928152" />
+      <point x="1319.222495304232" y="571.4710179640718" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="Main.StopWatchFrame" target="Main.StopWatch" relationship="TO_MANY">
+      <point x="54.15966038439092" y="-50.0" />
+      <point x="3453.119425694067" y="88.12372890582469" />
+      <point x="88.0" y="0.0" />
+    </edge>
+    <edge source="Commands.AddActivityCommand" target="Main.StopWatchButton" relationship="TO_ONE">
+      <point x="-4.7747747748871916E-4" y="38.5" />
+      <point x="2457.027939031029" y="628.2640446379967" />
+      <point x="1820.566" y="628.2640446379967" />
+      <point x="3.903102897311328E-4" y="-49.500089275993446" />
+    </edge>
+    <edge source="ButtonFactory.ButtonGenerator" target="ButtonFactory.ButtonFactory" relationship="GENERALIZATION">
+      <point x="0.0" y="38.5" />
+      <point x="0.0" y="-49.5" />
+    </edge>
+    <edge source="StopWatchTypes.SwimmingStopWatch" target="Main.StopWatch" relationship="GENERALIZATION">
+      <point x="4.6597713662777096E-4" y="-26.99961785519872" />
+      <point x="847.688" y="395.0056178551987" />
+      <point x="1020.0" y="395.0056178551987" />
+      <point x="1020.0" y="88.124" />
+      <point x="-88.00030903303946" y="2.7109417530368773E-4" />
+    </edge>
+    <edge source="ButtonFactory.ButtonGenerator" target="ButtonTypes.DeleteActivityButton" relationship="CREATE">
+      <point x="133.5" y="0.0" />
+      <point x="1712.8069597169297" y="1103.4612084921066" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="StopWatchTypes.RunningStopWatch" target="Main.StopWatch" relationship="GENERALIZATION">
+      <point x="108.00046597713663" y="-4.714207947245086E-4" />
+      <point x="1020.0" y="719.022" />
+      <point x="1020.0" y="88.124" />
+      <point x="-88.00030903303946" y="2.7109417530368773E-4" />
+    </edge>
+    <edge source="Commands.DeleteActivityCommand" target="Main.StopWatchButton" relationship="TO_ONE">
+      <point x="-4.7747747748871916E-4" y="38.5" />
+      <point x="2755.527939031029" y="628.2640446379967" />
+      <point x="1820.566" y="628.2640446379967" />
+      <point x="3.903102897311328E-4" y="-49.500089275993446" />
+    </edge>
+    <edge source="ButtonTypes.AddActivityButton" target="Main.StopWatchButton" relationship="GENERALIZATION">
+      <point x="-4.414806749082345E-4" y="-38.500089275993446" />
+      <point x="1268.297" y="921.0" />
+      <point x="1820.566" y="921.0" />
+      <point x="3.903102897311328E-4" y="49.499910724006554" />
+    </edge>
+    <edge source="ButtonTypes.AddActivityButton" target="StopWatchFactory.StopWatchGenerator" relationship="CREATE">
+      <point x="-86.5" y="0.0" />
+      <point x="463.45134458356006" y="980.5280892759935" />
+      <point x="-45.0" y="38.5" />
+    </edge>
+    <edge source="Main.StopWatchFrame" target="ButtonFactory.ButtonGenerator" relationship="CREATE">
+      <point x="0.0" y="-50.0" />
+      <point x="3398.959765309676" y="1133.4612084921066" />
+      <point x="133.5" y="30.0" />
+    </edge>
+    <edge source="StopWatchDecorator.GreenBackground" target="StopWatchDecorator.StopWatchDecorator" relationship="GENERALIZATION">
+      <point x="-5.7501704304741E-6" y="-49.99983560152424" />
+      <point x="-5.7501704304741E-6" y="38.50016439847576" />
+    </edge>
+    <edge source="Main.StopWatchApp" target="Commands.AddActivityCommand" relationship="CREATE">
+      <point x="-17.500126126125906" y="-38.5" />
+      <point x="129.0" y="38.5" />
+    </edge>
+    <edge source="Commands.StartStopCommand" target="Commands.Command" relationship="REALIZATION">
+      <point x="-4.7747747748871916E-4" y="-38.5" />
+      <point x="2171.027939031029" y="445.2640446379967" />
+      <point x="2603.528939031029" y="445.2640446379967" />
+      <point x="3.9639639680899563E-4" y="27.000389765922705" />
+    </edge>
+    <edge source="StopWatchFactory.StopWatchGenerator" target="StopWatchTypes.GamingStopWatch" relationship="CREATE">
+      <point x="125.5" y="0.0" />
+      <point x="611.5041916167665" y="131.20745236799132" />
+      <point x="611.5041916167665" y="287.0" />
+      <point x="847.6875340228634" y="287.0" />
+      <point x="0.0" y="-27.0" />
+    </edge>
+    <edge source="StopWatchFactory.StopWatchGenerator" target="StopWatchTypes.WalkingStopWatch" relationship="CREATE">
+      <point x="15.0" y="38.5" />
+      <point x="523.4513445835601" y="611.0168535655961" />
+      <point x="-108.0" y="0.0" />
+    </edge>
+    <edge source="Commands.ChangeColorCommand" target="Main.StopWatchButton" relationship="TO_ONE">
+      <point x="-4.7747747748871916E-4" y="38.5" />
+      <point x="3058.027939031029" y="628.2640446379967" />
+      <point x="1820.566" y="628.2640446379967" />
+      <point x="3.903102897311328E-4" y="-49.500089275993446" />
+    </edge>
+    <edge source="ButtonTypes.ChangeColorButton" target="Main.StopWatchButton" relationship="GENERALIZATION">
+      <point x="-4.953042321176326E-4" y="38.5" />
+      <point x="1548.222" y="921.0" />
+      <point x="1820.566" y="921.0" />
+      <point x="3.903102897311328E-4" y="49.499910724006554" />
+    </edge>
+    <edge source="StopWatchTypes.ProgrammingStopWatch" target="Main.StopWatch" relationship="GENERALIZATION">
+      <point x="4.6597713662777096E-4" y="26.99976428960258" />
+      <point x="847.688" y="503.0112357103974" />
+      <point x="1020.0" y="503.0112357103974" />
+      <point x="1020.0" y="88.124" />
+      <point x="-88.00030903303946" y="2.7109417530368773E-4" />
+    </edge>
+    <edge source="ButtonTypes.ChangeColorButton" target="StopWatchDecorator.GreenBackground" relationship="CREATE">
+      <point x="0.0" y="-38.5" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="StopWatchDecorator.RedBackground" target="StopWatchDecorator.StopWatchDecorator" relationship="GENERALIZATION">
+      <point x="-5.7501704304741E-6" y="-49.99983560152424" />
+      <point x="1775.7224895540617" y="346.95416439847577" />
+      <point x="1548.2224895540617" y="346.95416439847577" />
+      <point x="-5.7501704304741E-6" y="38.50016439847576" />
+    </edge>
+    <edge source="ButtonTypes.DeleteActivityButton" target="Main.StopWatchButton" relationship="GENERALIZATION">
+      <point x="87.0" y="-38.5" />
+      <point x="-20.75864997278063" y="49.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8161716617379439" showDependencies="true" x="1697.1130458443092" y="467.6480839281438" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
