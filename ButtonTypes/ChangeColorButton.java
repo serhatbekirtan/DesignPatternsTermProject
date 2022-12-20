@@ -18,7 +18,6 @@ public class ChangeColorButton extends StopWatchButton{
     public void click() {
         
         System.out.println("Change Activity Background Color Button Clicked");
-        //StopWatch cyclingStopWatch = new RedBackground(stopwatches.get(1));
         StopWatchFrame frame = StopWatchFrame.getInstance();
 
         Scanner scanner = new Scanner(System.in);

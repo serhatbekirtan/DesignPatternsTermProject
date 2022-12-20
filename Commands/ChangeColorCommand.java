@@ -4,7 +4,6 @@ import Main.StopWatchButton;
 
 public class ChangeColorCommand implements Command{
 
-    String activityName;
     StopWatchButton button;
 
     public ChangeColorCommand(StopWatchButton button) {
