@@ -1,6 +1,6 @@
 package Main;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 import ButtonFactory.ButtonFactory;
 import ButtonFactory.ButtonGenerator;
@@ -8,8 +8,8 @@ import ButtonFactory.ButtonGenerator;
 public class StopWatchFrame {
 
     private static StopWatchFrame uniqueFrame = new StopWatchFrame();
-    public LinkedList<StopWatchButton> buttons = new LinkedList<StopWatchButton>();
-    public LinkedList<StopWatch> stopwatches = new LinkedList<StopWatch>();
+    public ArrayList<StopWatchButton> buttons = new ArrayList<>();
+    public ArrayList<StopWatch> stopwatches = new ArrayList<>();
     private ButtonFactory buttonFactory = new ButtonGenerator();
 
     private StopWatchFrame(){
@@ -19,7 +19,7 @@ public class StopWatchFrame {
         buttons.add(buttonFactory.createStopWatchButton("Change Color"));
         buttons.add(buttonFactory.createStopWatchButton("Start/Stop"));
 
-        System.out.println("");
+        System.out.println();
     }
 
     public static StopWatchFrame getInstance(){
@@ -27,10 +27,10 @@ public class StopWatchFrame {
     }
 
     public void printStopwatches(){
-        System.out.println("");
+        System.out.println();
         for (StopWatch stopwatch : stopwatches) {
             System.out.println(stopwatch.getActivityName());
         }
-        System.out.println("");
+        System.out.println();
     }
 }

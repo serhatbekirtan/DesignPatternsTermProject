@@ -27,6 +27,7 @@ public class DeleteActivityButton extends StopWatchButton{
             }
 
             int stopWatchToDelete = scanner.nextInt();
+            System.out.println("Deleting " + frame.stopwatches.get(stopWatchToDelete).getActivityName() + "...");
             frame.stopwatches.remove(stopWatchToDelete);
             
             whileLoopKey = false;

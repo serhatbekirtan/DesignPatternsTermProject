@@ -14,3 +14,4 @@ public abstract class StopWatchFactory{
 
     abstract StopWatch generateStopwatch(String activityName);
 }
+

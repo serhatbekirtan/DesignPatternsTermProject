@@ -13,3 +13,4 @@ public abstract class ButtonFactory {
 
     abstract StopWatchButton generateButton(String buttonName);
 }
+

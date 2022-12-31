@@ -24,10 +24,10 @@ public class AddActivityButton extends StopWatchButton{
         System.out.print("Enter Activity Name: ");
         activityName = input.nextLine();
 
-        System.out.println("");
+        System.out.println();
 
         StopWatchFrame.getInstance().stopwatches.add(factory.createStopwatch(activityName));
 
-        System.out.println("");
+        System.out.println();
     }
 }
